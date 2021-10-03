@@ -1,19 +1,33 @@
+{% load static %}
 <html>
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{% static 'css/mediciones.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+</head>
 <body>
-  <div>
+  <div class="titulo">
     <h1><a href="/">Lista de Mediciones</a></h1>
 </div>
 
     {% for medicion in mediciones %}
-    <div>
-          <h2> Medicion:{{medicion.id}}</h2>
-          <p> C02: {{ medicion.medicion }}</p>
-          <p>idSensor: {{medicion.id_sensor}}</p>
-        <p>  Coordenadas: ({{medicion.x}}
+    <div class="contenido">
+      <div class="col-md-2">
+
+      <div class="tituloMediciones">
+          <h2><b> Medicion:</b>{{medicion.id}}</h2>
+        </div>
+          <p><b> C02:</b> {{ medicion.medicion }}</p>
+          <p><b>idSensor:</b> {{medicion.id_sensor}}</p>
+          <p><b>Fecha:</b>{{medicion.fecha}}</p>
+        <p><b>Coordenadas:</b> ({{medicion.x}}
           ,{{medicion.y}})
           </p>
           <p>{{ post.text|linebreaksbr }}</p>
       </div>
+    </div>
       {% endfor %}
 </body>
 </html>
