@@ -13,5 +13,14 @@ class Medicion(models.Model):
     def devolverMedicion(self):
         return self.medicion
 
+    def saveMedicion(self):
+        self.save()
+
+    def getLongitud():
+
+
+    def getLatitud():
+
+
     def __str__(self):
         return "Medición "+str(self.id) + " - " + str(self.id_sensor)
