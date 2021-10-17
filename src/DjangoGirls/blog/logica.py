@@ -3,6 +3,9 @@
 
 class MedicionDB():
 
+def guardarMedicion():
+    
+
 def getTodasLasMediciones():
 
     return.Medicion.objects.all()
