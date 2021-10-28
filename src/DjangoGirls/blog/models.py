@@ -10,16 +10,9 @@ class Medicion(models.Model):
     x = models.FloatField()
     y = models.FloatField()
 
-    def devolverMedicion(self):
+    def obtenerMedicion(self):
         return self.medicion
 
-    def saveMedicion(self):
-        self.save()
-
-    def getLongitud():
-
-
-    def getLatitud():
 
 
     def __str__(self):
